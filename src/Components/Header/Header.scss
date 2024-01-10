@@ -1,0 +1,54 @@
+.header {
+    padding: 24px 0px 23px;
+    background: var(--header-background);
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.06);
+    
+    .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        h2 {
+            color: var(--main-textColor);
+            font-family: Nunito Sans;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: normal;
+        }
+        
+        .change-theme {
+            cursor: pointer;
+            .mode {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                
+                p {
+                    color: var(--main-textColor);
+                    font-family: Nunito Sans;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                }
+            }
+            .none {
+                display: none;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .header {
+        .wrapper {
+            .change-theme {
+                p {
+                    display: none;
+                }
+            }
+        }
+    }
+}

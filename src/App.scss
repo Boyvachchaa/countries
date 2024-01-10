@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.light {
+    --body-color: #FAFAFA;
+    --header-background: #FFF;
+    --header-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.06);
+    --input-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
+    --cards-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.03);
+    --main-textColor: #111517;
+    --input-color: #848484;
+    --modal-blur: rgba(0, 0, 0, 0.80);
+    --modal-background: #FFF;
+    --border-countries: #FFF;
+}
+
+.dark {
+    --body-color: #202C36;
+    --header-background: #2B3844;
+    --main-textColor: #FFFFFF;
+    --input-color: #FFFFFF;
+    --modal-blur: rgba(0, 0, 0, 0.65);
+    --modal-background: #202C36;
+    --border-countries: #2B3844;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img{
+    display: block;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0px 20px;
+}
+
+.app {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: var(--body-color);
+}
+
+
+.filter-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 48px;
+    
+    .input-area {
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        background: var(--header-background);
+        box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
+        width: 480px;
+        padding: 19px 0px 19px 32px;
+        gap: 32px;
+        
+        input{
+            color: var(--main-textColor);
+            font-family: Nunito Sans;
+            font-size: 14px;
+            line-height: 20px;
+            border: 0;
+            outline: 0;
+            background-color: transparent;
+            width: 80%;
+        }
+    }
+    select {
+        width: 200px;
+        height: 56px;
+        border: 0;
+        border-radius: 5px;
+        background: var(--header-background);
+        box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
+        padding: 18px 18px 18px 24px;
+        color: var(--main-textColor);
+        font-family: Nunito Sans;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        outline: none;
+    }
+}
+
+.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // margin: 30px 0px 20px;
+    // padding-top: 30px;
+    padding: 30px 0px 20px 0px;
+
+    button {
+        padding: 10px 20px 10px 20px;
+        background-color: transparent;
+        outline: 0;
+        border: 2px solid var(--main-textColor);
+        transition: 0.5s;
+        border-radius: 15px;
+        color: var(--main-textColor);
+    }
+}
+
+.not-found {
+    display: flex;
+    justify-content: center;
+    h1 {
+        color: var(--main-textColor);
+    }
+}
+
+
+
+@media only screen and (max-width: 725px) {
+    .filter-items {
+        
+        .input-area {
+            width: 380px;
+            
+            input{
+                width: 80%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 627px) {
+    .filter-items {
+        .input-area {
+            width: 300px;
+        }
+    }
+}
+
+@media only screen and (max-width: 553px ) {
+    .filter-items {
+        .input-area {
+            width: 250px;
+        }
+    }
+}
+
+@media only screen and (max-width: 499px) {
+    .filter-items {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+    }
+}
+
+@media only screen and (max-width: 363px) {
+    .not-found {
+        h1 {
+            font-size: 20px;
+        }
+    }
+}
